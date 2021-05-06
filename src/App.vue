@@ -1,11 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+
+
+
+ <router-view>  
+   <Home />
+ </router-view>
 </template>
 
+<script>
+import Home from "./views/Home";
+export default {
+  name:"App",
+  components:{
+    Home,
+
+}
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -27,4 +38,22 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+.btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  width: 100px;
+ height: 100px;
+  
+}
+
+
 </style>
